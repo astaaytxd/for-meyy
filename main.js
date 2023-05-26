@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
 
         cancelButtonText: 'No',
 
-    }).then((result) => {
+       }).then((result) => {
 
         if (result.isConfirmed) {
 
