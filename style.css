@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,html {
+  padding: 0;
+  margin: 0;
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /*scroll-padding-top: 2rem;*/
+}
+:root {
+  --main-color: #008148;
+  --second-color: #1e3932;
+  --bg-color: whitesmoke;
+}
+body {
+  
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background-color: var(--bg-color);
+}
+.texthome {
+  width: 100%;
+}
+.img1 img{
+  width: 100%;
+  animation: animate 3s linear infinite;
+}
+.texthome h1{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: green;
+}
+.texthome p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 5px 0;
+}
+.texthome span {
+  font-size: 0.6rem;
+  display: block;
+}
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+  padding: 7px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border-radius: 25px;
+  font-weight: 400;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+.btn:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+@keyframes animate {
+  0% {
+    transform: translate(-9px, 10px);
+  }
+  50% {
+    transform: translate(0, -11px);
+  }
+  100% {
+    transform: translate(-9px, 10px);
+  }
+}
+
+/* Ucapan */
+.ucapan {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  background-color: white;
+  width: 350px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 20px;
+}
+.wrapper header {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.wrapper header:after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 3px;
+  margin: 2px auto;
+  border-radius: 2px;
+  background-color: var(--main-color);
+}
+.wrapper .quote-area {
+  margin: 25px 0px auto;
+  text-align: center;
+}
+.wrapper .quote-area p:nth-child(2) {
+  text-align: right;
+  margin: 10px 0;
+}
+.btn2 {
+  margin: 10px auto;
+  width: 100px;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 50px;
+}
+.quote-area:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+.btn3 {
+  text-decoration: none;
+  display: none;
+  text-align: center;
+  width: 100px;
+  padding: 5px;
+  margin: 15px auto;
+  border-radius: 25px;
+  font-weight: 400;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  color: var(--main-color);
+}
+.btn3:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+/* PENUTUP */
+.penutup {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+}
+.container2 {
+
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    transform-style: preserve-3d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards {
+    position: relative;
+    height: 370px;
+    width: 250px;
+    /*margin-bottom: 20px;*/
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+.cards label {
+
+    position: absolute;
+    width: 230px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+/*.cards .card{
+
+    position: relative;
+    height: 100%;
+    background-color: #323444;
+    border-radius: 10px;
+    padding: 30px 35px;
+}
+*/
+input {
+  display: none;
+}
+.card {
+  position: relative;
+  width: 260px;
+  height: 450px;
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 70);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.foto {
+  width: 190px;
+  height: 300px;
+  margin-top: 20px;
+  background-color: var(--second-color);
+}
+.cards .card span {
+  font-size: 0.9rem;
+  padding: 20px 10px;
+  font-weight: 600;
+}
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(-35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5 {
+    box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 50%);
+    transform: translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --current-color2: #ECEAED;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1 {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(35%, 0, -120px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2 {
+    box-shadow: 0 15px 35px 0 rgba(0, 0, 0, 45%);
+    transform: translate3d(70%, 0, -220px);
+    --current-color1: #ECEAED;
+    --current-color2: #404457;
+}
+
+/*RESPONSIVE*/
+@media screen and (min-width: 600px) {
+  .home {
+    flex-direction: row;
+  }
+}
